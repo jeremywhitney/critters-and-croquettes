@@ -13,7 +13,10 @@ class Toad:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
+    def __str__(self):
+        return f"{self.name} is a {self.species}."
+
 
 toby = Toad("Toby", "American toad", "Slug Stew")
-print(f"{toby.name} is a {toby.species}.")
+print(toby)
 toby.feed()

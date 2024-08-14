@@ -13,7 +13,10 @@ class Turtle:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
+    def __str__(self):
+        return f"{self.name} is a {self.species}."
+
 
 turbo = Turtle("Turbo", "Painted turtle", "Pizza")
-print(f"{turbo.name} is a {turbo.species}.")
+print(turbo)
 turbo.feed()

@@ -14,9 +14,10 @@ class MiniHorse:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
+    def __str__(self):
+        return f"{self.name} the {self.species} is available to pet during the {self.shift} shift."
+
 
 lilsebastian = MiniHorse("Li'l Sebastian", "Miniature horse", "morning", "Carrots")
-print(
-    f"{lilsebastian.name} the {lilsebastian.species} is available to pet during the {lilsebastian.shift} shift."
-)
+print(lilsebastian)
 lilsebastian.feed()

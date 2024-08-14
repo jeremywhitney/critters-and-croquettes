@@ -14,10 +14,10 @@ class Donkey:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
+    def __str__(self):
+        return f"{self.name} the {self.species} is available to pet during the {self.shift} shift."
+
 
 eddie = Donkey("Eddie", "Irish donkey", "midday", "Donkey Herbs")
-print(
-    f"{eddie.name} the {eddie.species} is available to pet during the {eddie.shift} shift."
-)
-
+print(eddie)
 eddie.feed()
