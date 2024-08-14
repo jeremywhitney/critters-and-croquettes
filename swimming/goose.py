@@ -13,7 +13,10 @@ class Goose:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
+    def __str__(self):
+        return f"{self.name} is a {self.species}."
+
 
 freckles = Goose("Freckles", "Pomeranian goose", "Goose Grains")
-print(f"{freckles.name} is a {freckles.species}.")
+print(freckles)
 freckles.feed()

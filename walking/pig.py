@@ -14,9 +14,10 @@ class Pig:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
+    def __str__(self):
+        return f"{self.name} the {self.species} is available to pet during the {self.shift} shift."
+
 
 peaches = Pig("Peaches", "Göttingen minipig", "morning", "Piggy Pantry")
-print(
-    f"{peaches.name} the {peaches.species} is available to pet during the {peaches.shift} shift."
-)
+print(peaches)
 peaches.feed()

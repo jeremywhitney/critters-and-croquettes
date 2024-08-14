@@ -13,7 +13,10 @@ class Goldfish:
     def feed(self):
         print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
+    def __str__(self):
+        return f"{self.name} is a {self.species}."
+
 
 sunny = Goldfish("Sunny", "Comet goldfish", "Fancy Fish Fish Pellets")
-print(f"{sunny.name} is a {sunny.species}.")
+print(sunny)
 sunny.feed()
